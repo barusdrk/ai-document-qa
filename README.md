@@ -309,6 +309,12 @@ Return answer + citations
 
 ---
 
+# License
+
+MIT License
+
+---
+
 ## Author
 
 **Derek Barus**
