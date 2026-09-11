@@ -311,6 +311,6 @@ Return answer + citations
 
 ## Author
 
-Derek Barus
+**Derek Barus**
 
-GitHub: https://github.com/barusdrk
+GitHub: [@barusdrk](https://github.com/barusdrk)
