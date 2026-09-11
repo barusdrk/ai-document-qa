@@ -18,10 +18,7 @@ const PORT =
   process.env.PORT || 3001;
 
 
-/*
- * Middleware
- */
-
+// Middleware
 app.use(
   cors({
     origin: [
@@ -39,10 +36,7 @@ app.use(
 );
 
 
-/*
- * Health check
- */
-
+// Health check
 app.get(
   "/",
   (_req, res) => {
@@ -54,10 +48,7 @@ app.get(
 );
 
 
-/*
- * API Routes
- */
-
+// API Routes
 app.use(
   "/api/auth",
   authRoutes
@@ -83,11 +74,7 @@ app.use(
   dashboardRoutes
 );
 
-
-/*
- * Error handler
- */
-
+// Error handler
 app.use(
   (
     err: Error,
@@ -104,11 +91,7 @@ app.use(
   }
 );
 
-
-/*
- * Database connection
- */
-
+// Database connection
 async function startServer() {
   try {
     await mongoose.connect(

@@ -48,7 +48,7 @@ const UserSchema =
         required: true,
       },
 
-      /* Dashboard */
+      // Dashboard
 
       documentsUploaded: {
         type: Number,
@@ -65,14 +65,14 @@ const UserSchema =
         default: 0,
       },
 
-      /* Weekly / Monthly charts */
+      // Weekly / Monthly charts
 
       activity: {
         type: [ActivitySchema],
         default: [],
       },
 
-      /* Future SaaS */
+      // Future SaaS
 
       plan: {
         type: String,

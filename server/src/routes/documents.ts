@@ -45,9 +45,7 @@ router.get(
   }
 );
 
-/*
- * DELETE /documents/:documentId
- */
+// DELETE /documents/:documentId
 router.delete<{
   documentId: string;
 }>(
@@ -108,9 +106,7 @@ router.delete<{
   }
 );
 
-/*
- * GET /documents/:documentId
- */
+// GET /documents/:documentId
 router.get<{
   documentId: string;
 }>(

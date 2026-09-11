@@ -3,7 +3,7 @@
 /* Tailwind v4: use the .dark class instead of system preference */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ---------- Theme Variables ---------- */
+/* Theme Variables */
 
 :root {
   color-scheme: light;
@@ -39,7 +39,7 @@ html.dark {
   --muted: #94a3b8;
 }
 
-/* ---------- Base ---------- */
+/* Base */
 
 *,
 *::before,
@@ -85,7 +85,7 @@ body {
   flex-direction: column;
 }
 
-/* ---------- Typography ---------- */
+/* Typography */
 
 h1,
 h2,
@@ -123,14 +123,14 @@ img {
   display: block;
 }
 
-/* ---------- Selection ---------- */
+/* Selection */
 
 ::selection {
   background: #3b82f6;
   color: white;
 }
 
-/* ---------- Scrollbar ---------- */
+/* Scrollbar */
 
 ::-webkit-scrollbar {
   width: 10px;

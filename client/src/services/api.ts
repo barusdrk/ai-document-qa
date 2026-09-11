@@ -6,10 +6,7 @@ const API = axios.create({
     "http://localhost:3001",
 });
 
-/* --------------------------------------------------
- * Authentication
- * -------------------------------------------------- */
-
+// Authentication
 export function setAuthToken(
   token: string | null
 ) {
@@ -35,10 +32,7 @@ API.interceptors.request.use(
   }
 );
 
-/* --------------------------------------------------
- * User
- * -------------------------------------------------- */
-
+// User
 export interface User {
   id: string;
   name: string;
@@ -63,20 +57,14 @@ export interface RegisterRequest {
   password: string;
 }
 
-/* --------------------------------------------------
- * Upload
- * -------------------------------------------------- */
-
+// Upload
 export interface UploadResponse {
   documentId: string;
   chunks: number;
   pages: number;
 }
 
-/* --------------------------------------------------
- * Documents
- * -------------------------------------------------- */
-
+// Documents
 export interface DocumentSummary {
   documentId: string;
   fileName: string;
@@ -89,10 +77,7 @@ export interface DocumentSummary {
   lastAccessed: string;
 }
 
-/* --------------------------------------------------
- * Questions
- * -------------------------------------------------- */
-
+// Questions
 export interface Source {
   page: number;
   text: string;
@@ -103,10 +88,7 @@ export interface AskResponse {
   sources: Source[];
 }
 
-/* --------------------------------------------------
- * Dashboard
- * -------------------------------------------------- */
-
+// Dashboard
 export interface DashboardStats {
   documents: number;
   chunks: number;
@@ -139,10 +121,7 @@ export interface DashboardResponse {
   limits: StorageLimits;
 }
 
-/* --------------------------------------------------
- * Search
- * -------------------------------------------------- */
-
+// Search
 export interface SearchResult {
   documentId: string;
   fileName: string;
@@ -155,10 +134,7 @@ export interface SearchResponse {
   matches: SearchResult[];
 }
 
-/* --------------------------------------------------
- * Auth API
- * -------------------------------------------------- */
-
+// Auth API
 export async function register(
   payload: RegisterRequest
 ): Promise<AuthResponse> {
@@ -187,10 +163,7 @@ export async function login(
   return data;
 }
 
-/* --------------------------------------------------
- * Upload API
- * -------------------------------------------------- */
-
+// Upload API
 export async function uploadDocument(
   file: File
 ): Promise<UploadResponse> {
@@ -226,10 +199,7 @@ export async function uploadText(
   return data;
 }
 
-/* --------------------------------------------------
- * Questions API
- * -------------------------------------------------- */
-
+// Questions API
 export async function askQuestion(
   documentId: string,
   question: string
@@ -246,10 +216,7 @@ export async function askQuestion(
   return data;
 }
 
-/* --------------------------------------------------
- * Dashboard API
- * -------------------------------------------------- */
-
+// Dashboard API
 export async function getDashboard(): Promise<DashboardResponse> {
   const { data } =
     await API.get<DashboardResponse>(
@@ -259,10 +226,7 @@ export async function getDashboard(): Promise<DashboardResponse> {
   return data;
 }
 
-/* --------------------------------------------------
- * Documents API
- * -------------------------------------------------- */
-
+// Documents API
 export async function getDocuments(): Promise<
   DocumentSummary[]
 > {
@@ -293,10 +257,7 @@ export async function deleteDocument(
   );
 }
 
-/* --------------------------------------------------
- * Search API
- * -------------------------------------------------- */
-
+// Search API
 export async function searchDocument(
   documentId: string,
   query: string

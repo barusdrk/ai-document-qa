@@ -22,7 +22,7 @@ const QuestionSchema =
         index: true,
       },
 
-      /* User input */
+      // User input
 
       question: {
         type: String,
@@ -30,7 +30,7 @@ const QuestionSchema =
         trim: true,
       },
 
-      /* AI response */
+      // AI response
 
       answer: {
         type: String,
@@ -54,7 +54,7 @@ const QuestionSchema =
         default: 0,
       },
 
-      /* Metadata */
+      // Metadata
 
       model: {
         type: String,
@@ -76,7 +76,7 @@ const QuestionSchema =
         default: "",
       },
 
-      /* Future features */
+      // Future features
 
       bookmarked: {
         type: Boolean,

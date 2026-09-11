@@ -68,7 +68,7 @@ router.post(
         performance.now() -
         start;
 
-      /* Save question history */
+      // Save question history
 
       await Question.create({
         owner: ownerId,
@@ -92,7 +92,7 @@ router.post(
         model: "mock-ai",
       });
 
-      /* Update document analytics */
+      // Update document analytics
 
       document.questionCount += 1;
 
@@ -117,7 +117,7 @@ router.post(
 
       await document.save();
 
-      /* Update user statistics */
+      // Update user statistics
 
       const today =
         new Date()

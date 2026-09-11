@@ -204,7 +204,7 @@ GET /dashboard
 ## Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/ai-document-qa.git
+git clone https://github.com/barusdrk/ai-document-qa.git
 ```
 
 ```bash

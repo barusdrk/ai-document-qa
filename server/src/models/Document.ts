@@ -14,7 +14,7 @@ const DocumentSchema =
         index: true,
       },
 
-      /* File information */
+      // File information
 
       fileName: {
         type: String,
@@ -43,14 +43,14 @@ const DocumentSchema =
         default: 1,
       },
 
-      /* Vector index */
+      // Vector index
 
       chunkCount: {
         type: Number,
         default: 0,
       },
 
-      /* Usage */
+      // Usage
 
       questionCount: {
         type: Number,
@@ -67,7 +67,7 @@ const DocumentSchema =
         default: Date.now,
       },
 
-      /* AI analytics */
+      // AI analytics
 
       lastQuestion: {
         type: String,
@@ -96,7 +96,7 @@ const DocumentSchema =
         default: [],
       },
 
-      /* Future features */
+      // Future features
 
       summary: {
         type: String,

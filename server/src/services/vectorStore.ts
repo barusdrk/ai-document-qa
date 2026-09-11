@@ -17,9 +17,7 @@ const store =
     StoredChunk[]
   >();
 
-/*
- * Cosine similarity
- */
+// Cosine similarity
 function cosineSimilarity(
   a: number[],
   b: number[]
@@ -47,9 +45,7 @@ function cosineSimilarity(
   );
 }
 
-/*
- * Store chunks
- */
+// Store chunks
 export function storeDocument(
   ownerId: string,
   documentId: string,
@@ -70,9 +66,7 @@ export function storeDocument(
   store.set(key, stored);
 }
 
-/*
- * Delete document
- */
+// Delete documents
 export function deleteDocument(
   ownerId: string,
   documentId: string
@@ -82,9 +76,7 @@ export function deleteDocument(
   );
 }
 
-/*
- * List document ids
- */
+// List documents ids
 export function listDocuments(
   ownerId: string
 ): string[] {
@@ -100,9 +92,7 @@ export function listDocuments(
     );
 }
 
-/*
- * Semantic search
- */
+// Semantic search
 export function searchDocument(
   ownerId: string,
   documentId: string,
@@ -132,9 +122,7 @@ export function searchDocument(
     .slice(0, limit);
 }
 
-/*
- * Keyword search
- */
+// Keyword search
 export function keywordSearch(
   ownerId: string,
   documentId: string,
@@ -156,9 +144,7 @@ export function keywordSearch(
   );
 }
 
-/*
- * Document statistics
- */
+// Document statistics
 export function getDocumentStats(
   ownerId: string
 ) {
@@ -186,9 +172,7 @@ export function getDocumentStats(
   };
 }
 
-/*
- * Clear everything
- */
+// Clear everything
 export function clearStore() {
   store.clear();
 }
